@@ -105,6 +105,12 @@ namespace PROGETTO_PERSONALE_4_
             CalcoloFabbisognoCaloricoGiornaliero altro = (CalcoloFabbisognoCaloricoGiornaliero)obj;
             return Sesso == altro.Sesso && Peso == altro.Peso && Altezza == altro.Altezza && Eta == altro.Eta && LivelloAttivita == altro.LivelloAttivita;
         }
+
+        //MOTODO GetHashCode
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }
 
