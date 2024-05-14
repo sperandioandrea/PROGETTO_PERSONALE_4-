@@ -87,6 +87,14 @@ namespace PROGETTO_PERSONALE_4_
             fabbisognoCalorico -= 500;
             return fabbisognoCalorico;
         }
+
+
+
+        //METODO ToString
+        public override string ToString()
+        {
+            return $"Sesso: {Sesso}, Peso: {Peso}, Altezza: {Altezza}, Età: {Eta}, Livello Attività: {LivelloAttivita}";
+        }
     }
 }
 
