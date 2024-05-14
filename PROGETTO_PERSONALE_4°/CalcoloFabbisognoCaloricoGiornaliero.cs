@@ -17,5 +17,16 @@ namespace PROGETTO_PERSONALE_4_
         public int Eta { get; set; }
         public AttivitaFisica LivelloAttivita { get; set; }
 
+
+
+        //COSTRUTTORE SENZA PARAMETRI
+        public CalcoloFabbisognoCaloricoGiornaliero()
+        {
+            Sesso = string.Empty; ;
+            Peso = 0;
+            Altezza = 0;
+            Eta = 0;
+            LivelloAttivita = new AttivitaFisica();
+        }
     }
 }
