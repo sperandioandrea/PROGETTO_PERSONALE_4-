@@ -28,5 +28,15 @@ namespace PROGETTO_PERSONALE_4_
             Eta = 0;
             LivelloAttivita = new AttivitaFisica();
         }
+
+        //COSTRUTTORE CON PARAMETRI
+        public CalcoloFabbisognoCaloricoGiornaliero(string sesso, double peso, double altezza, int eta, AttivitaFisica livelloAttivita)
+        {
+            Sesso = sesso;
+            Peso = peso;
+            Altezza = altezza;
+            Eta = eta;
+            LivelloAttivita = livelloAttivita;
+        }
     }
 }
