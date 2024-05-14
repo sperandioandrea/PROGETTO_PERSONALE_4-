@@ -95,6 +95,16 @@ namespace PROGETTO_PERSONALE_4_
         {
             return $"Sesso: {Sesso}, Peso: {Peso}, Altezza: {Altezza}, Età: {Eta}, Livello Attività: {LivelloAttivita}";
         }
+
+        //METODO Equals
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            CalcoloFabbisognoCaloricoGiornaliero altro = (CalcoloFabbisognoCaloricoGiornaliero)obj;
+            return Sesso == altro.Sesso && Peso == altro.Peso && Altezza == altro.Altezza && Eta == altro.Eta && LivelloAttivita == altro.LivelloAttivita;
+        }
     }
 }
 
