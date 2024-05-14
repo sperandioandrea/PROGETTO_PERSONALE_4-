@@ -48,5 +48,45 @@ namespace PROGETTO_PERSONALE_4_
             Eta = c.Eta;
             LivelloAttivita = c.LivelloAttivita;
         }
+
+
+
+        //FUNZIONE CHE CALCOLA IL FABBISOGNO CALORICO GIORNALIERO
+        public double CalcolaFabbisognoCaloricoGiornaliero()
+        {
+            double fabbisognoCalorico = 0;
+
+            //Equazione di Harris-Benedict per il calcolo del metabolismo basale (MB)
+            if (Sesso == "uomo")
+            {
+                fabbisognoCalorico = 88.362 + (13.397 * Peso) + (4.799 * Altezza) - (5.677 * Eta);
+            }
+            else if (Sesso == "donna")
+            {
+                fabbisognoCalorico = 447.593 + (9.247 * Peso) + (3.098 * Altezza) - (4.330 * Eta);
+            }
+            else
+            {
+                throw new ArgumentException("Sesso non valido");
+            }
+
+            // Moltiplichiamo MB per il fattore di attività fisica
+            switch (LivelloAttivita)
+            {
+                case AttivitaFisica.Sedentario:
+                    fabbisognoCalorico *= 1.2; // Sedentario
+                    break;
+                case AttivitaFisica.ModeratamenteAttivo:
+                    fabbisognoCalorico *= 1.55; // Moderatamente attivo
+                    break;
+                case AttivitaFisica.Attivo:
+                    fabbisognoCalorico *= 1.725; // Attivo
+                    break;
+            }
+
+            fabbisognoCalorico -= 500;
+            return fabbisognoCalorico;
+        }
     }
 }
+
