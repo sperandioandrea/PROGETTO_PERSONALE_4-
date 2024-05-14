@@ -38,5 +38,15 @@ namespace PROGETTO_PERSONALE_4_
             Eta = eta;
             LivelloAttivita = livelloAttivita;
         }
+
+        //COSTRUTTORE DI COPIA
+        public CalcoloFabbisognoCaloricoGiornaliero(CalcoloFabbisognoCaloricoGiornaliero c)
+        {
+            Sesso = c.Sesso;
+            Peso = c.Peso;
+            Altezza = c.Altezza;
+            Eta = c.Eta;
+            LivelloAttivita = c.LivelloAttivita;
+        }
     }
 }
