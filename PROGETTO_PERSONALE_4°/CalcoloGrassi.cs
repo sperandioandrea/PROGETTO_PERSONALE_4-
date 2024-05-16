@@ -36,5 +36,12 @@ namespace PROGETTO_PERSONALE_4_
         {
             return Peso * 0.9;
         }
+
+
+        //MOTODO ToString
+        public override string ToString()
+        {
+            return $"Peso: {Peso}";
+        }
     }
 }
