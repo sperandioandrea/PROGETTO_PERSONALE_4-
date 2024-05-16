@@ -24,5 +24,11 @@ namespace PROGETTO_PERSONALE_4_
         {
             Peso = peso;    
         }
+
+        //COSTRUTTORE DI COPIA
+        public CalcoloCarboidrati(CalcoloCarboidrati cr)
+        {
+            Peso = cr.Peso;
+        }
     }
 }
