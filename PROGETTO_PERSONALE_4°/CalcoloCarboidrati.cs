@@ -10,5 +10,13 @@ namespace PROGETTO_PERSONALE_4_
     {
         //ATTRIBUTI
         public double Peso { get; set; }
+
+
+
+        //COSTRUTTURE SENZA PARAMETRI
+        public CalcoloCarboidrati() 
+        {
+            Peso = 0;
+        }
     }
 }
