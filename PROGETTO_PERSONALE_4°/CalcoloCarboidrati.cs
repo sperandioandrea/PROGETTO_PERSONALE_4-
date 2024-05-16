@@ -33,6 +33,7 @@ namespace PROGETTO_PERSONALE_4_
 
 
 
+
         //FUNZIONE CALCOLO CARBOIDRATI GIORNALIERI
         public double CalcolaCarboidrati()
         {
@@ -41,10 +42,28 @@ namespace PROGETTO_PERSONALE_4_
 
 
 
+
         //METODO ToString
         public override string ToString()
         {
             return $"Peso: {Peso}";
         }
+
+        //METODO Equals
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            CalcoloProteine altro = (CalcoloProteine)obj;
+            return Peso == altro.Peso;
+        }
+
+        //METODO GetHashCode
+        public override int GetHashCode()
+        {
+            return Peso.GetHashCode();
+        }
+
     }
 }
