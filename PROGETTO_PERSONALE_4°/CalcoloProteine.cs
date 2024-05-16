@@ -36,7 +36,18 @@ namespace PROGETTO_PERSONALE_4_
 
 
         //FUNZIONE CALCOLO PROTEINE GIORNALIERE
+        public double CalcolaProteine()
+        {
+            return Peso * 2;
+        }
 
+
+
+        //METODO ToString
+        public override string ToString()
+        {
+            return $"Peso: {Peso}";
+        }
 
     }
 }
