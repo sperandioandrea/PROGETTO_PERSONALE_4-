@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PROGETTO_PERSONALE_4_
 {
@@ -20,6 +21,28 @@ namespace PROGETTO_PERSONALE_4_
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+
+        //CALCOLO FABBISOGNO CALORICO GIORNALIERO - BOTTONE
+        private void CalcoloCalorieButton_Click(object sender, EventArgs e)
+        {
+            // Ottieni i valori inseriti dall'utente dalle textbox
+            string sesso = SessoComboBox.Text;
+            double peso = double.Parse(PesoTextBox.Text);
+            double altezza = double.Parse(AltezzaTextBox.Text);
+            int eta = int.Parse(EtaTextBox.Text);
+            AttivitaFisica livelloAttivita = (AttivitaFisica)LivelloAttivitaComboBox.SelectedIndex;
+
+            // Crea un'istanza della classe CalcoloFabbisognoCaloricoGiornaliero
+            CalcoloFabbisognoCaloricoGiornaliero calcolatore = new CalcoloFabbisognoCaloricoGiornaliero(sesso, peso, altezza, eta, livelloAttivita);
+
+            // Calcola il fabbisogno calorico giornaliero
+            double fabbisognoCalorico = calcolatore.CalcolaFabbisognoCaloricoGiornaliero();
+
+            // Visualizza il risultato nella ListView
+            ListViewItem item = new ListViewItem("Fabbisogno Calorico: " + fabbisognoCalorico.ToString());
+            listView1.Items.Add(item);
         }
     }
 }

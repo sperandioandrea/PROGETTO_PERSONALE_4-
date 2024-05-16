@@ -85,7 +85,7 @@ namespace PROGETTO_PERSONALE_4_
                     break;
             }
 
-            fabbisognoCalorico -= 500;
+            fabbisognoCalorico -= 0;
             return fabbisognoCalorico;
         }
 
