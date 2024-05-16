@@ -43,11 +43,12 @@
             this.CalcoloGrassibutton = new System.Windows.Forms.Button();
             this.CalcoloProteinebutton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.CalcoloCarboidratibutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CalcoloCalorieButton
             // 
-            this.CalcoloCalorieButton.Location = new System.Drawing.Point(125, 39);
+            this.CalcoloCalorieButton.Location = new System.Drawing.Point(203, 22);
             this.CalcoloCalorieButton.Margin = new System.Windows.Forms.Padding(4);
             this.CalcoloCalorieButton.Name = "CalcoloCalorieButton";
             this.CalcoloCalorieButton.Size = new System.Drawing.Size(186, 58);
@@ -58,7 +59,7 @@
             // 
             // PesoTextBox
             // 
-            this.PesoTextBox.Location = new System.Drawing.Point(155, 139);
+            this.PesoTextBox.Location = new System.Drawing.Point(233, 122);
             this.PesoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PesoTextBox.Name = "PesoTextBox";
             this.PesoTextBox.Size = new System.Drawing.Size(132, 29);
@@ -66,7 +67,7 @@
             // 
             // AltezzaTextBox
             // 
-            this.AltezzaTextBox.Location = new System.Drawing.Point(155, 175);
+            this.AltezzaTextBox.Location = new System.Drawing.Point(233, 158);
             this.AltezzaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.AltezzaTextBox.Name = "AltezzaTextBox";
             this.AltezzaTextBox.Size = new System.Drawing.Size(132, 29);
@@ -74,7 +75,7 @@
             // 
             // EtaTextBox
             // 
-            this.EtaTextBox.Location = new System.Drawing.Point(155, 211);
+            this.EtaTextBox.Location = new System.Drawing.Point(233, 194);
             this.EtaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.EtaTextBox.Name = "EtaTextBox";
             this.EtaTextBox.Size = new System.Drawing.Size(132, 29);
@@ -87,7 +88,7 @@
             "sedentario",
             "moderamente attivo",
             "attivo"});
-            this.LivelloAttivitaComboBox.Location = new System.Drawing.Point(139, 247);
+            this.LivelloAttivitaComboBox.Location = new System.Drawing.Point(217, 230);
             this.LivelloAttivitaComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.LivelloAttivitaComboBox.Name = "LivelloAttivitaComboBox";
             this.LivelloAttivitaComboBox.Size = new System.Drawing.Size(160, 30);
@@ -99,7 +100,7 @@
             this.SessoComboBox.Items.AddRange(new object[] {
             "uomo",
             "donna"});
-            this.SessoComboBox.Location = new System.Drawing.Point(155, 104);
+            this.SessoComboBox.Location = new System.Drawing.Point(233, 87);
             this.SessoComboBox.Name = "SessoComboBox";
             this.SessoComboBox.Size = new System.Drawing.Size(132, 30);
             this.SessoComboBox.TabIndex = 6;
@@ -108,9 +109,9 @@
             // 
             this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(743, 25);
+            this.listView1.Location = new System.Drawing.Point(743, 39);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(397, 565);
+            this.listView1.Size = new System.Drawing.Size(397, 551);
             this.listView1.TabIndex = 7;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
@@ -118,7 +119,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 143);
+            this.label2.Location = new System.Drawing.Point(123, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 23);
             this.label2.TabIndex = 9;
@@ -127,7 +128,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 109);
+            this.label1.Location = new System.Drawing.Point(123, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 23);
             this.label1.TabIndex = 10;
@@ -136,7 +137,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 179);
+            this.label3.Location = new System.Drawing.Point(123, 162);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 23);
             this.label3.TabIndex = 11;
@@ -145,7 +146,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 211);
+            this.label4.Location = new System.Drawing.Point(123, 194);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 23);
             this.label4.TabIndex = 12;
@@ -154,7 +155,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 247);
+            this.label5.Location = new System.Drawing.Point(123, 230);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 23);
             this.label5.TabIndex = 13;
@@ -162,9 +163,9 @@
             // 
             // CalcoloGrassibutton
             // 
-            this.CalcoloGrassibutton.Location = new System.Drawing.Point(434, 76);
+            this.CalcoloGrassibutton.Location = new System.Drawing.Point(512, 54);
             this.CalcoloGrassibutton.Name = "CalcoloGrassibutton";
-            this.CalcoloGrassibutton.Size = new System.Drawing.Size(128, 58);
+            this.CalcoloGrassibutton.Size = new System.Drawing.Size(142, 63);
             this.CalcoloGrassibutton.TabIndex = 14;
             this.CalcoloGrassibutton.Text = "CALCOLO GRASSI";
             this.CalcoloGrassibutton.UseVisualStyleBackColor = true;
@@ -172,9 +173,9 @@
             // 
             // CalcoloProteinebutton
             // 
-            this.CalcoloProteinebutton.Location = new System.Drawing.Point(434, 140);
+            this.CalcoloProteinebutton.Location = new System.Drawing.Point(512, 123);
             this.CalcoloProteinebutton.Name = "CalcoloProteinebutton";
-            this.CalcoloProteinebutton.Size = new System.Drawing.Size(128, 60);
+            this.CalcoloProteinebutton.Size = new System.Drawing.Size(142, 60);
             this.CalcoloProteinebutton.TabIndex = 15;
             this.CalcoloProteinebutton.Text = "CALCOLO PROTEINE";
             this.CalcoloProteinebutton.UseVisualStyleBackColor = true;
@@ -184,11 +185,21 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label6.Location = new System.Drawing.Point(820, 39);
+            this.label6.Location = new System.Drawing.Point(833, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(260, 23);
+            this.label6.Size = new System.Drawing.Size(272, 23);
             this.label6.TabIndex = 16;
-            this.label6.Text = "SCHEDA PERSONALE UTENTE";
+            this.label6.Text = "SCHEDA  PERSONALE   UTENTE";
+            // 
+            // CalcoloCarboidratibutton
+            // 
+            this.CalcoloCarboidratibutton.Location = new System.Drawing.Point(512, 189);
+            this.CalcoloCarboidratibutton.Name = "CalcoloCarboidratibutton";
+            this.CalcoloCarboidratibutton.Size = new System.Drawing.Size(142, 63);
+            this.CalcoloCarboidratibutton.TabIndex = 17;
+            this.CalcoloCarboidratibutton.Text = "CALCOLO CARBOIDRATI";
+            this.CalcoloCarboidratibutton.UseVisualStyleBackColor = true;
+            this.CalcoloCarboidratibutton.Click += new System.EventHandler(this.CalcoloCarboidratibutton_Click);
             // 
             // Form1
             // 
@@ -197,6 +208,7 @@
             this.BackgroundImage = global::PROGETTO_PERSONALE_4_.Properties.Resources._75204555_selezione_di_spezie_erbe_e_verdi_ingredienti_per_la_cottura_sfondo_alimentare_sul_tavolo_nero;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1164, 602);
+            this.Controls.Add(this.CalcoloCarboidratibutton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.CalcoloProteinebutton);
             this.Controls.Add(this.CalcoloGrassibutton);
@@ -239,6 +251,7 @@
         private System.Windows.Forms.Button CalcoloGrassibutton;
         private System.Windows.Forms.Button CalcoloProteinebutton;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button CalcoloCarboidratibutton;
     }
 }
 

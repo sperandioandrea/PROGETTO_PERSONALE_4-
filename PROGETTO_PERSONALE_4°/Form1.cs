@@ -46,6 +46,7 @@ namespace PROGETTO_PERSONALE_4_
         }
 
 
+
         //CALCOLO GRASSI - BOTTONE
         private void CalcoloGrassibutton_Click(object sender, EventArgs e)
         {
@@ -64,6 +65,7 @@ namespace PROGETTO_PERSONALE_4_
         }
 
 
+
         //CALCOLO PROTEINE - BOTTONE
         private void CalcoloProteinebutton_Click(object sender, EventArgs e)
         {
@@ -78,6 +80,24 @@ namespace PROGETTO_PERSONALE_4_
 
             // Visualizza il risultato nella ListView
             ListViewItem item = new ListViewItem("Numero Proteine: " + proteine.ToString() + " g");
+            listView1.Items.Add(item);
+        }
+
+
+        //CALCOLO CARBOIDRATI - BOTTONE
+        private void CalcoloCarboidratibutton_Click(object sender, EventArgs e)
+        {
+            // Ottieni i valori inseriti dall'utente dalla textbox
+            double peso = double.Parse(PesoTextBox.Text);
+
+            // Crea un'istanza della classe CalcoloFabbisognoCaloricoGiornaliero
+            CalcoloCarboidrati calcolatore = new CalcoloCarboidrati(peso);
+
+            // Calcola il fabbisogno calorico giornaliero
+            double carboidrati = calcolatore.CalcolaCarboidrati();
+
+            // Visualizza il risultato nella ListView
+            ListViewItem item = new ListViewItem("Numero Carboidrati: " + carboidrati.ToString() + " g");
             listView1.Items.Add(item);
         }
     }
