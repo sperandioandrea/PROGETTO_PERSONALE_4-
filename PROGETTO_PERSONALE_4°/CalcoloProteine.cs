@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace PROGETTO_PERSONALE_4_
 {
-    internal class CalcoloProteine
+    public class CalcoloProteine
     {
+        //ATTRIBUTI
+        public double Peso { get; set; }
     }
 }
