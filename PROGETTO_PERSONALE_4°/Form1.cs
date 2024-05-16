@@ -23,6 +23,9 @@ namespace PROGETTO_PERSONALE_4_
 
         }
 
+        ListViewItem item = new ListViewItem("             SCHEDA PERSONALE UTENTE ");
+       
+
 
         //CALCOLO FABBISOGNO CALORICO GIORNALIERO - BOTTONE
         private void CalcoloCalorieButton_Click(object sender, EventArgs e)
@@ -60,6 +63,24 @@ namespace PROGETTO_PERSONALE_4_
 
             // Visualizza il risultato nella ListView
             ListViewItem item = new ListViewItem("Numero Grassi: " + grassi.ToString() + " g");
+            listView1.Items.Add(item);
+        }
+
+
+        //CALCOLO PROTEINE - BOTTONE
+        private void CalcoloProteinebutton_Click(object sender, EventArgs e)
+        {
+            // Ottieni i valori inseriti dall'utente dalla textbox
+            double peso = double.Parse(PesoTextBox.Text);
+
+            // Crea un'istanza della classe CalcoloFabbisognoCaloricoGiornaliero
+            CalcoloProteine calcolatore = new CalcoloProteine(peso);
+
+            // Calcola il fabbisogno calorico giornaliero
+            double proteine = calcolatore.CalcolaProteine();
+
+            // Visualizza il risultato nella ListView
+            ListViewItem item = new ListViewItem("Numero Proteine: " + proteine.ToString() + " g");
             listView1.Items.Add(item);
         }
     }

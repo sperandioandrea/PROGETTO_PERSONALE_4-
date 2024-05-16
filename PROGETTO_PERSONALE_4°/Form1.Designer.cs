@@ -41,14 +41,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.CalcoloGrassibutton = new System.Windows.Forms.Button();
+            this.CalcoloProteinebutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CalcoloCalorieButton
             // 
-            this.CalcoloCalorieButton.Location = new System.Drawing.Point(130, 25);
+            this.CalcoloCalorieButton.Location = new System.Drawing.Point(125, 39);
             this.CalcoloCalorieButton.Margin = new System.Windows.Forms.Padding(4);
             this.CalcoloCalorieButton.Name = "CalcoloCalorieButton";
-            this.CalcoloCalorieButton.Size = new System.Drawing.Size(186, 70);
+            this.CalcoloCalorieButton.Size = new System.Drawing.Size(186, 58);
             this.CalcoloCalorieButton.TabIndex = 0;
             this.CalcoloCalorieButton.Text = "CALCOLO FABBISOGNO CALORICO GIORNALIERO";
             this.CalcoloCalorieButton.UseVisualStyleBackColor = true;
@@ -159,13 +160,23 @@
             // 
             // CalcoloGrassibutton
             // 
-            this.CalcoloGrassibutton.Location = new System.Drawing.Point(357, 139);
+            this.CalcoloGrassibutton.Location = new System.Drawing.Point(434, 76);
             this.CalcoloGrassibutton.Name = "CalcoloGrassibutton";
             this.CalcoloGrassibutton.Size = new System.Drawing.Size(128, 58);
             this.CalcoloGrassibutton.TabIndex = 14;
             this.CalcoloGrassibutton.Text = "CALCOLO GRASSI";
             this.CalcoloGrassibutton.UseVisualStyleBackColor = true;
             this.CalcoloGrassibutton.Click += new System.EventHandler(this.CalcoloGrassibutton_Click);
+            // 
+            // CalcoloProteinebutton
+            // 
+            this.CalcoloProteinebutton.Location = new System.Drawing.Point(434, 140);
+            this.CalcoloProteinebutton.Name = "CalcoloProteinebutton";
+            this.CalcoloProteinebutton.Size = new System.Drawing.Size(128, 60);
+            this.CalcoloProteinebutton.TabIndex = 15;
+            this.CalcoloProteinebutton.Text = "CALCOLO PROTEINE";
+            this.CalcoloProteinebutton.UseVisualStyleBackColor = true;
+            this.CalcoloProteinebutton.Click += new System.EventHandler(this.CalcoloProteinebutton_Click);
             // 
             // Form1
             // 
@@ -174,6 +185,7 @@
             this.BackgroundImage = global::PROGETTO_PERSONALE_4_.Properties.Resources._75204555_selezione_di_spezie_erbe_e_verdi_ingredienti_per_la_cottura_sfondo_alimentare_sul_tavolo_nero;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1164, 602);
+            this.Controls.Add(this.CalcoloProteinebutton);
             this.Controls.Add(this.CalcoloGrassibutton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -212,6 +224,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button CalcoloGrassibutton;
+        private System.Windows.Forms.Button CalcoloProteinebutton;
     }
 }
 
