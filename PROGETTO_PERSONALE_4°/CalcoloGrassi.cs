@@ -17,5 +17,11 @@ namespace PROGETTO_PERSONALE_4_
         {
             Peso = 0;
         }
+
+        //COSTRUTTORE CON PARAMETRI
+        public CalcoloGrassi(double peso)
+        {
+            Peso = peso;
+        }
     }
 }
