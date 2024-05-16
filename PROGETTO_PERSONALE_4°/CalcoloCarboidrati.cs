@@ -30,5 +30,13 @@ namespace PROGETTO_PERSONALE_4_
         {
             Peso = cr.Peso;
         }
+
+
+
+        //FUNZIONE CALCOLO CARBOIDRATI GIORNALIERI
+        public double CalcolaCarboidrati()
+        {
+            return Peso * 5;
+        }
     }
 }
