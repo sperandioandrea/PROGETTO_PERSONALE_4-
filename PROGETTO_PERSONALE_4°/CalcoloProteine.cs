@@ -33,5 +33,10 @@ namespace PROGETTO_PERSONALE_4_
         }
 
 
+
+
+        //FUNZIONE CALCOLO PROTEINE GIORNALIERE
+
+
     }
 }

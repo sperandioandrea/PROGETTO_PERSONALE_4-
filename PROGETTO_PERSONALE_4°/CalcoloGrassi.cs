@@ -34,7 +34,7 @@ namespace PROGETTO_PERSONALE_4_
 
 
 
-        //FUNZIONE CALCOLO GRASSI
+        //FUNZIONE CALCOLO GRASSI GIORNALIERI
         public double CalcolaGrassi()
         {
             return Peso * 0.9;
