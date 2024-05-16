@@ -29,5 +29,12 @@ namespace PROGETTO_PERSONALE_4_
         {
             Peso = g.Peso;
         }
+
+
+        //FUNZIONE CALCOLO GRASSI
+        public double CalcolaGrassi()
+        {
+            return Peso * 0.9;
+        }
     }
 }
