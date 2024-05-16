@@ -26,6 +26,12 @@ namespace PROGETTO_PERSONALE_4_
             Peso = peso;
         }
 
+        //COSTRUTTORE DI COPIA
+        public CalcoloProteine(CalcoloProteine p)
+        {
+            Peso = p.Peso;
+        }
+
 
     }
 }
