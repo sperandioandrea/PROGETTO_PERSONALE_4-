@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace PROGETTO_PERSONALE_4_
 {
-    internal class CalcoloGrassi
+    public class CalcoloGrassi
     {
+        //Attributi
+        public double Peso { get; set; }
     }
 }
