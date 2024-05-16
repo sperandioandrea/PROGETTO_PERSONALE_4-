@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="CalcoloFabbisognoCaloricoGiornaliero.cs" />
     <Compile Include="CalcoloGrassi.cs" />
+    <Compile Include="CalcoloProteine.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
