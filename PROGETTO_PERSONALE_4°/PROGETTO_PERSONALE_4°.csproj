@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalcoloCarboidrati.cs" />
     <Compile Include="CalcoloFabbisognoCaloricoGiornaliero.cs" />
     <Compile Include="CalcoloGrassi.cs" />
     <Compile Include="CalcoloProteine.cs" />

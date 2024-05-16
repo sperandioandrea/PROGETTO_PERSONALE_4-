@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.CalcoloGrassibutton = new System.Windows.Forms.Button();
             this.CalcoloProteinebutton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CalcoloCalorieButton
@@ -105,6 +106,7 @@
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(743, 25);
             this.listView1.Name = "listView1";
@@ -178,6 +180,16 @@
             this.CalcoloProteinebutton.UseVisualStyleBackColor = true;
             this.CalcoloProteinebutton.Click += new System.EventHandler(this.CalcoloProteinebutton_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label6.Location = new System.Drawing.Point(820, 39);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(260, 23);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "SCHEDA PERSONALE UTENTE";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -185,6 +197,7 @@
             this.BackgroundImage = global::PROGETTO_PERSONALE_4_.Properties.Resources._75204555_selezione_di_spezie_erbe_e_verdi_ingredienti_per_la_cottura_sfondo_alimentare_sul_tavolo_nero;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1164, 602);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.CalcoloProteinebutton);
             this.Controls.Add(this.CalcoloGrassibutton);
             this.Controls.Add(this.label5);
@@ -225,6 +238,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button CalcoloGrassibutton;
         private System.Windows.Forms.Button CalcoloProteinebutton;
+        private System.Windows.Forms.Label label6;
     }
 }
 

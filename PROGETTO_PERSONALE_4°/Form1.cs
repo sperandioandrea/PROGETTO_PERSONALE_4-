@@ -23,10 +23,7 @@ namespace PROGETTO_PERSONALE_4_
 
         }
 
-        ListViewItem item = new ListViewItem("             SCHEDA PERSONALE UTENTE ");
-       
-
-
+ 
         //CALCOLO FABBISOGNO CALORICO GIORNALIERO - BOTTONE
         private void CalcoloCalorieButton_Click(object sender, EventArgs e)
         {
