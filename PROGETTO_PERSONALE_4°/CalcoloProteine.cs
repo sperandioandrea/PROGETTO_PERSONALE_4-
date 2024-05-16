@@ -10,5 +10,12 @@ namespace PROGETTO_PERSONALE_4_
     {
         //ATTRIBUTI
         public double Peso { get; set; }
+
+
+        //COSTRUTTORE SENZA PARAMETRI
+        public CalcoloProteine()
+        {
+            Peso = 0;
+        }
     }
 }
