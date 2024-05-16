@@ -40,11 +40,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.CalcoloGrassibutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CalcoloCalorieButton
             // 
-            this.CalcoloCalorieButton.Location = new System.Drawing.Point(71, 32);
+            this.CalcoloCalorieButton.Location = new System.Drawing.Point(104, 21);
             this.CalcoloCalorieButton.Margin = new System.Windows.Forms.Padding(4);
             this.CalcoloCalorieButton.Name = "CalcoloCalorieButton";
             this.CalcoloCalorieButton.Size = new System.Drawing.Size(186, 70);
@@ -55,7 +56,7 @@
             // 
             // PesoTextBox
             // 
-            this.PesoTextBox.Location = new System.Drawing.Point(97, 147);
+            this.PesoTextBox.Location = new System.Drawing.Point(130, 136);
             this.PesoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PesoTextBox.Name = "PesoTextBox";
             this.PesoTextBox.Size = new System.Drawing.Size(132, 25);
@@ -63,7 +64,7 @@
             // 
             // AltezzaTextBox
             // 
-            this.AltezzaTextBox.Location = new System.Drawing.Point(97, 183);
+            this.AltezzaTextBox.Location = new System.Drawing.Point(130, 172);
             this.AltezzaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.AltezzaTextBox.Name = "AltezzaTextBox";
             this.AltezzaTextBox.Size = new System.Drawing.Size(132, 25);
@@ -71,7 +72,7 @@
             // 
             // EtaTextBox
             // 
-            this.EtaTextBox.Location = new System.Drawing.Point(97, 219);
+            this.EtaTextBox.Location = new System.Drawing.Point(130, 208);
             this.EtaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.EtaTextBox.Name = "EtaTextBox";
             this.EtaTextBox.Size = new System.Drawing.Size(132, 25);
@@ -84,7 +85,7 @@
             "sedentario",
             "moderamente attivo",
             "attivo"});
-            this.LivelloAttivitaComboBox.Location = new System.Drawing.Point(81, 255);
+            this.LivelloAttivitaComboBox.Location = new System.Drawing.Point(114, 244);
             this.LivelloAttivitaComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.LivelloAttivitaComboBox.Name = "LivelloAttivitaComboBox";
             this.LivelloAttivitaComboBox.Size = new System.Drawing.Size(160, 26);
@@ -96,7 +97,7 @@
             this.SessoComboBox.Items.AddRange(new object[] {
             "uomo",
             "donna"});
-            this.SessoComboBox.Location = new System.Drawing.Point(97, 112);
+            this.SessoComboBox.Location = new System.Drawing.Point(130, 101);
             this.SessoComboBox.Name = "SessoComboBox";
             this.SessoComboBox.Size = new System.Drawing.Size(132, 26);
             this.SessoComboBox.TabIndex = 6;
@@ -114,7 +115,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 154);
+            this.label2.Location = new System.Drawing.Point(45, 143);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 18);
             this.label2.TabIndex = 9;
@@ -123,7 +124,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 120);
+            this.label1.Location = new System.Drawing.Point(45, 109);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 18);
             this.label1.TabIndex = 10;
@@ -132,7 +133,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 190);
+            this.label3.Location = new System.Drawing.Point(45, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 18);
             this.label3.TabIndex = 11;
@@ -141,7 +142,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 222);
+            this.label4.Location = new System.Drawing.Point(45, 211);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 18);
             this.label4.TabIndex = 12;
@@ -150,11 +151,21 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 258);
+            this.label5.Location = new System.Drawing.Point(45, 247);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 18);
             this.label5.TabIndex = 13;
             this.label5.Text = "stato";
+            // 
+            // CalcoloGrassibutton
+            // 
+            this.CalcoloGrassibutton.Location = new System.Drawing.Point(357, 139);
+            this.CalcoloGrassibutton.Name = "CalcoloGrassibutton";
+            this.CalcoloGrassibutton.Size = new System.Drawing.Size(128, 58);
+            this.CalcoloGrassibutton.TabIndex = 14;
+            this.CalcoloGrassibutton.Text = "CALCOLO GRASSI";
+            this.CalcoloGrassibutton.UseVisualStyleBackColor = true;
+            this.CalcoloGrassibutton.Click += new System.EventHandler(this.CalcoloGrassibutton_Click);
             // 
             // Form1
             // 
@@ -163,6 +174,7 @@
             this.BackgroundImage = global::PROGETTO_PERSONALE_4_.Properties.Resources._75204555_selezione_di_spezie_erbe_e_verdi_ingredienti_per_la_cottura_sfondo_alimentare_sul_tavolo_nero;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1164, 602);
+            this.Controls.Add(this.CalcoloGrassibutton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -199,6 +211,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button CalcoloGrassibutton;
     }
 }
 

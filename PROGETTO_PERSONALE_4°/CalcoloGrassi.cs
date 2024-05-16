@@ -12,6 +12,8 @@ namespace PROGETTO_PERSONALE_4_
         public double Peso { get; set; }
 
         
+
+
         //COSTRUTTORE SENZA PARAMETRI
         public CalcoloGrassi()
         {
@@ -31,11 +33,13 @@ namespace PROGETTO_PERSONALE_4_
         }
 
 
+
         //FUNZIONE CALCOLO GRASSI
         public double CalcolaGrassi()
         {
             return Peso * 0.9;
         }
+
 
 
         //METODO ToString
@@ -53,6 +57,7 @@ namespace PROGETTO_PERSONALE_4_
             CalcoloGrassi altro = (CalcoloGrassi)obj;
             return Peso == altro.Peso;
         }
+
         //METODO GetHashCode
         public override int GetHashCode()
         {

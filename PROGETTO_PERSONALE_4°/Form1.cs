@@ -41,7 +41,24 @@ namespace PROGETTO_PERSONALE_4_
             double fabbisognoCalorico = calcolatore.CalcolaFabbisognoCaloricoGiornaliero();
 
             // Visualizza il risultato nella ListView
-            ListViewItem item = new ListViewItem("Fabbisogno Calorico: " + fabbisognoCalorico.ToString());
+            ListViewItem item = new ListViewItem("Fabbisogno Calorico Giornaliero: " + fabbisognoCalorico.ToString() + " cal");
+            listView1.Items.Add(item);
+        }
+
+        //CALCOLO GRASSI - BOTTONE
+        private void CalcoloGrassibutton_Click(object sender, EventArgs e)
+        {
+            // Ottieni i valori inseriti dall'utente dalla textbox
+            double peso = double.Parse(PesoTextBox.Text);
+
+            // Crea un'istanza della classe CalcoloFabbisognoCaloricoGiornaliero
+            CalcoloGrassi calcolatore = new CalcoloGrassi(peso);
+
+            // Calcola il fabbisogno calorico giornaliero
+            double grassi = calcolatore.CalcolaGrassi();
+
+            // Visualizza il risultato nella ListView
+            ListViewItem item = new ListViewItem("Numero Grassi: " + grassi.ToString() + " g");
             listView1.Items.Add(item);
         }
     }

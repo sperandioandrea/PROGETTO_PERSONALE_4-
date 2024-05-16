@@ -20,6 +20,7 @@ namespace PROGETTO_PERSONALE_4_
 
 
 
+
         //COSTRUTTORE SENZA PARAMETRI
         public CalcoloFabbisognoCaloricoGiornaliero()
         {
@@ -49,6 +50,7 @@ namespace PROGETTO_PERSONALE_4_
             Eta = c.Eta;
             LivelloAttivita = c.LivelloAttivita;
         }
+
 
 
 
@@ -85,9 +87,10 @@ namespace PROGETTO_PERSONALE_4_
                     break;
             }
 
-            fabbisognoCalorico -= 0;
+            fabbisognoCalorico -= 200;
             return fabbisognoCalorico;
         }
+
 
 
 
