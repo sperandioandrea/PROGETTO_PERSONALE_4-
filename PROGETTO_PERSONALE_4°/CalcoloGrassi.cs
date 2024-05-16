@@ -8,7 +8,14 @@ namespace PROGETTO_PERSONALE_4_
 {
     public class CalcoloGrassi
     {
-        //Attributi
+        //ATTRIBUTI
         public double Peso { get; set; }
+
+        
+        //COSTRUTTORE SENZA PARAMETRI
+        public CalcoloGrassi()
+        {
+            Peso = 0;
+        }
     }
 }
