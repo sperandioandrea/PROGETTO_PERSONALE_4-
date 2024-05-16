@@ -12,10 +12,20 @@ namespace PROGETTO_PERSONALE_4_
         public double Peso { get; set; }
 
 
+
+
         //COSTRUTTORE SENZA PARAMETRI
         public CalcoloProteine()
         {
             Peso = 0;
         }
+
+        //COSTRUTTORE CON PARAMETRI
+        public CalcoloProteine(double peso)
+        {
+            Peso = peso;
+        }
+
+
     }
 }
