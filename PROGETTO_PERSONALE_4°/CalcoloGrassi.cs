@@ -23,5 +23,11 @@ namespace PROGETTO_PERSONALE_4_
         {
             Peso = peso;
         }
+
+        //COSTRUTTORE DI COPIA
+        public CalcoloGrassi(CalcoloGrassi g)
+        {
+            Peso = g.Peso;
+        }
     }
 }
