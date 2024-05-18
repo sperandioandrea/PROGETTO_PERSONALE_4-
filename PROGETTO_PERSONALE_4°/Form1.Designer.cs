@@ -48,12 +48,12 @@
             // 
             // CalcoloCalorieButton
             // 
-            this.CalcoloCalorieButton.Location = new System.Drawing.Point(203, 22);
+            this.CalcoloCalorieButton.Location = new System.Drawing.Point(183, 22);
             this.CalcoloCalorieButton.Margin = new System.Windows.Forms.Padding(4);
             this.CalcoloCalorieButton.Name = "CalcoloCalorieButton";
-            this.CalcoloCalorieButton.Size = new System.Drawing.Size(186, 58);
+            this.CalcoloCalorieButton.Size = new System.Drawing.Size(252, 58);
             this.CalcoloCalorieButton.TabIndex = 0;
-            this.CalcoloCalorieButton.Text = "CALCOLO FABBISOGNO CALORICO GIORNALIERO";
+            this.CalcoloCalorieButton.Text = "CALCOLO FABBISOGNO CALORICO GIORNALIERO CALORIE";
             this.CalcoloCalorieButton.UseVisualStyleBackColor = true;
             this.CalcoloCalorieButton.Click += new System.EventHandler(this.CalcoloCalorieButton_Click);
             // 
@@ -107,7 +107,7 @@
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.listView1.BackColor = System.Drawing.Color.White;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(743, 39);
             this.listView1.Name = "listView1";
@@ -184,7 +184,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(833, 13);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(272, 23);
