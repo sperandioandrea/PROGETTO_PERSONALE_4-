@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
 
 namespace PROGETTO_PERSONALE_4_
 {
@@ -16,33 +18,43 @@ namespace PROGETTO_PERSONALE_4_
         public Form1()
         {
             InitializeComponent();
+            this.FormClosing += Form1_FormClosing;
+            UscitaDalProgramma.Click += UscitaDalProgramma_Click;
         }
+
+        private List<string> schede = new List<string>();
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            CaricaSchedeDaJson();
+        }
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            listView1.Items.Clear();
+            schede.Clear();
+            SalvaSchedeInJson();
         }
 
- 
+
         //CALCOLO FABBISOGNO CALORICO GIORNALIERO - BOTTONE
         private void CalcoloCalorieButton_Click(object sender, EventArgs e)
         {
-            // Ottieni i valori inseriti dall'utente dalle textbox
             string sesso = SessoComboBox.Text;
             double peso = double.Parse(PesoTextBox.Text);
             double altezza = double.Parse(AltezzaTextBox.Text);
             int eta = int.Parse(EtaTextBox.Text);
             AttivitaFisica livelloAttivita = (AttivitaFisica)LivelloAttivitaComboBox.SelectedIndex;
 
-            // Crea un'istanza della classe CalcoloFabbisognoCaloricoGiornaliero
             CalcoloFabbisognoCaloricoGiornaliero calcolatore = new CalcoloFabbisognoCaloricoGiornaliero(sesso, peso, altezza, eta, livelloAttivita);
 
-            // Calcola il fabbisogno calorico giornaliero
             double fabbisognoCalorico = calcolatore.CalcolaFabbisognoCaloricoGiornaliero();
 
-            // Visualizza il risultato nella ListView
-            ListViewItem item = new ListViewItem("Fabbisogno Calorico Giornaliero: " + fabbisognoCalorico.ToString() + " cal");
+            string risultato = "Fabbisogno Calorico Giornaliero: " + fabbisognoCalorico.ToString() + " cal";
+            ListViewItem item = new ListViewItem(risultato);
             listView1.Items.Add(item);
+
+            schede.Add(risultato);
+            SalvaSchedeInJson();
         }
 
 
@@ -50,18 +62,18 @@ namespace PROGETTO_PERSONALE_4_
         //CALCOLO GRASSI - BOTTONE
         private void CalcoloGrassibutton_Click(object sender, EventArgs e)
         {
-            // Ottieni i valori inseriti dall'utente dalla textbox
             double peso = double.Parse(PesoTextBox.Text);
 
-            // Crea un'istanza della classe CalcoloFabbisognoCaloricoGiornaliero
             CalcoloGrassi calcolatore = new CalcoloGrassi(peso);
 
-            // Calcola il fabbisogno calorico giornaliero
             double grassi = calcolatore.CalcolaGrassi();
 
-            // Visualizza il risultato nella ListView
-            ListViewItem item = new ListViewItem("Numero Grassi: " + grassi.ToString() + " g");
+            string risultato = "Numero Grassi: " + grassi.ToString() + " g";
+            ListViewItem item = new ListViewItem(risultato);
             listView1.Items.Add(item);
+
+            schede.Add(risultato);
+            SalvaSchedeInJson();
         }
 
 
@@ -69,36 +81,63 @@ namespace PROGETTO_PERSONALE_4_
         //CALCOLO PROTEINE - BOTTONE
         private void CalcoloProteinebutton_Click(object sender, EventArgs e)
         {
-            // Ottieni i valori inseriti dall'utente dalla textbox
             double peso = double.Parse(PesoTextBox.Text);
 
-            // Crea un'istanza della classe CalcoloFabbisognoCaloricoGiornaliero
             CalcoloProteine calcolatore = new CalcoloProteine(peso);
 
-            // Calcola il fabbisogno calorico giornaliero
             double proteine = calcolatore.CalcolaProteine();
 
-            // Visualizza il risultato nella ListView
-            ListViewItem item = new ListViewItem("Numero Proteine: " + proteine.ToString() + " g");
+            string risultato = "Numero Proteine: " + proteine.ToString() + " g";
+            ListViewItem item = new ListViewItem(risultato);
             listView1.Items.Add(item);
+
+            schede.Add(risultato);
+            SalvaSchedeInJson();
+
         }
 
 
         //CALCOLO CARBOIDRATI - BOTTONE
         private void CalcoloCarboidratibutton_Click(object sender, EventArgs e)
         {
-            // Ottieni i valori inseriti dall'utente dalla textbox
             double peso = double.Parse(PesoTextBox.Text);
 
-            // Crea un'istanza della classe CalcoloFabbisognoCaloricoGiornaliero
             CalcoloCarboidrati calcolatore = new CalcoloCarboidrati(peso);
 
-            // Calcola il fabbisogno calorico giornaliero
             double carboidrati = calcolatore.CalcolaCarboidrati();
 
-            // Visualizza il risultato nella ListView
-            ListViewItem item = new ListViewItem("Numero Carboidrati: " + carboidrati.ToString() + " g");
+            string risultato = "Numero Carboidrati: " + carboidrati.ToString() + " g";
+            ListViewItem item = new ListViewItem(risultato);
             listView1.Items.Add(item);
+
+            schede.Add(risultato);
+            SalvaSchedeInJson();
+        }
+
+        private void SalvaSchedeInJson()
+        {
+            string json = JsonConvert.SerializeObject(schede, Formatting.Indented);
+            File.WriteAllText("scheda.json", json);
+        }
+
+        private void CaricaSchedeDaJson()
+        {
+            if (File.Exists("scheda.json"))
+            {
+                string json = File.ReadAllText("scheda.json");
+                schede = JsonConvert.DeserializeObject<List<string>>(json) ?? new List<string>();
+
+                foreach (string scheda in schede)
+                {
+                    listView1.Items.Add(new ListViewItem(scheda));
+                }
+            }
+        }
+
+        //BOTTONE USCITA DAL PROGRAMMA
+        private void UscitaDalProgramma_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
