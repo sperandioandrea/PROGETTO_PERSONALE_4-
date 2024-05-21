@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CalcoloCalorieButton = new System.Windows.Forms.Button();
             this.PesoTextBox = new System.Windows.Forms.TextBox();
             this.AltezzaTextBox = new System.Windows.Forms.TextBox();
             this.EtaTextBox = new System.Windows.Forms.TextBox();
@@ -45,18 +44,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.CalcoloCarboidratibutton = new System.Windows.Forms.Button();
             this.UscitaDalProgramma = new System.Windows.Forms.Button();
+            this.CalcoloCalorieButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // CalcoloCalorieButton
-            // 
-            this.CalcoloCalorieButton.Location = new System.Drawing.Point(183, 22);
-            this.CalcoloCalorieButton.Margin = new System.Windows.Forms.Padding(4);
-            this.CalcoloCalorieButton.Name = "CalcoloCalorieButton";
-            this.CalcoloCalorieButton.Size = new System.Drawing.Size(252, 58);
-            this.CalcoloCalorieButton.TabIndex = 0;
-            this.CalcoloCalorieButton.Text = "CALCOLO FABBISOGNO CALORICO GIORNALIERO CALORIE";
-            this.CalcoloCalorieButton.UseVisualStyleBackColor = true;
-            this.CalcoloCalorieButton.Click += new System.EventHandler(this.CalcoloCalorieButton_Click);
             // 
             // PesoTextBox
             // 
@@ -109,7 +98,7 @@
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.White;
-            this.listView1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(743, 39);
             this.listView1.Name = "listView1";
@@ -165,22 +154,24 @@
             // 
             // CalcoloGrassibutton
             // 
+            this.CalcoloGrassibutton.BackColor = System.Drawing.Color.Yellow;
             this.CalcoloGrassibutton.Location = new System.Drawing.Point(512, 54);
             this.CalcoloGrassibutton.Name = "CalcoloGrassibutton";
             this.CalcoloGrassibutton.Size = new System.Drawing.Size(142, 63);
             this.CalcoloGrassibutton.TabIndex = 14;
             this.CalcoloGrassibutton.Text = "CALCOLO GRASSI";
-            this.CalcoloGrassibutton.UseVisualStyleBackColor = true;
+            this.CalcoloGrassibutton.UseVisualStyleBackColor = false;
             this.CalcoloGrassibutton.Click += new System.EventHandler(this.CalcoloGrassibutton_Click);
             // 
             // CalcoloProteinebutton
             // 
+            this.CalcoloProteinebutton.BackColor = System.Drawing.Color.Yellow;
             this.CalcoloProteinebutton.Location = new System.Drawing.Point(512, 123);
             this.CalcoloProteinebutton.Name = "CalcoloProteinebutton";
             this.CalcoloProteinebutton.Size = new System.Drawing.Size(142, 60);
             this.CalcoloProteinebutton.TabIndex = 15;
             this.CalcoloProteinebutton.Text = "CALCOLO PROTEINE";
-            this.CalcoloProteinebutton.UseVisualStyleBackColor = true;
+            this.CalcoloProteinebutton.UseVisualStyleBackColor = false;
             this.CalcoloProteinebutton.Click += new System.EventHandler(this.CalcoloProteinebutton_Click);
             // 
             // label6
@@ -195,23 +186,38 @@
             // 
             // CalcoloCarboidratibutton
             // 
+            this.CalcoloCarboidratibutton.BackColor = System.Drawing.Color.Yellow;
             this.CalcoloCarboidratibutton.Location = new System.Drawing.Point(512, 189);
             this.CalcoloCarboidratibutton.Name = "CalcoloCarboidratibutton";
             this.CalcoloCarboidratibutton.Size = new System.Drawing.Size(142, 63);
             this.CalcoloCarboidratibutton.TabIndex = 17;
             this.CalcoloCarboidratibutton.Text = "CALCOLO CARBOIDRATI";
-            this.CalcoloCarboidratibutton.UseVisualStyleBackColor = true;
+            this.CalcoloCarboidratibutton.UseVisualStyleBackColor = false;
             this.CalcoloCarboidratibutton.Click += new System.EventHandler(this.CalcoloCarboidratibutton_Click);
             // 
             // UscitaDalProgramma
             // 
+            this.UscitaDalProgramma.BackColor = System.Drawing.Color.Red;
+            this.UscitaDalProgramma.ForeColor = System.Drawing.Color.Black;
             this.UscitaDalProgramma.Location = new System.Drawing.Point(894, 555);
             this.UscitaDalProgramma.Name = "UscitaDalProgramma";
             this.UscitaDalProgramma.Size = new System.Drawing.Size(114, 44);
             this.UscitaDalProgramma.TabIndex = 18;
             this.UscitaDalProgramma.Text = "USCITA DAL PROGRAMMA ";
-            this.UscitaDalProgramma.UseVisualStyleBackColor = true;
+            this.UscitaDalProgramma.UseVisualStyleBackColor = false;
             this.UscitaDalProgramma.Click += new System.EventHandler(this.UscitaDalProgramma_Click);
+            // 
+            // CalcoloCalorieButton
+            // 
+            this.CalcoloCalorieButton.BackColor = System.Drawing.Color.Yellow;
+            this.CalcoloCalorieButton.Location = new System.Drawing.Point(106, 13);
+            this.CalcoloCalorieButton.Margin = new System.Windows.Forms.Padding(4);
+            this.CalcoloCalorieButton.Name = "CalcoloCalorieButton";
+            this.CalcoloCalorieButton.Size = new System.Drawing.Size(309, 67);
+            this.CalcoloCalorieButton.TabIndex = 0;
+            this.CalcoloCalorieButton.Text = "CALCOLO FABBISOGNO CALORICO GIORNALIERO CALORIE";
+            this.CalcoloCalorieButton.UseVisualStyleBackColor = false;
+            this.CalcoloCalorieButton.Click += new System.EventHandler(this.CalcoloCalorieButton_Click);
             // 
             // Form1
             // 
@@ -248,8 +254,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button CalcoloCalorieButton;
         private System.Windows.Forms.TextBox PesoTextBox;
         private System.Windows.Forms.TextBox AltezzaTextBox;
         private System.Windows.Forms.TextBox EtaTextBox;
@@ -266,6 +270,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button CalcoloCarboidratibutton;
         private System.Windows.Forms.Button UscitaDalProgramma;
+        private System.Windows.Forms.Button CalcoloCalorieButton;
     }
 }
 

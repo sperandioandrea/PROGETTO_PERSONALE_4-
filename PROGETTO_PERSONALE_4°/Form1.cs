@@ -114,12 +114,14 @@ namespace PROGETTO_PERSONALE_4_
             SalvaSchedeInJson();
         }
 
+        //SERIALIZZAZIONE
         private void SalvaSchedeInJson()
         {
             string json = JsonConvert.SerializeObject(schede, Formatting.Indented);
             File.WriteAllText("scheda.json", json);
         }
 
+        //DESERIALIZZAZIONE
         private void CaricaSchedeDaJson()
         {
             if (File.Exists("scheda.json"))
