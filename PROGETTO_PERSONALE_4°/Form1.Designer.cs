@@ -45,6 +45,7 @@
             this.CalcoloCarboidratibutton = new System.Windows.Forms.Button();
             this.UscitaDalProgramma = new System.Windows.Forms.Button();
             this.CalcoloCalorieButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PesoTextBox
@@ -219,6 +220,15 @@
             this.CalcoloCalorieButton.UseVisualStyleBackColor = false;
             this.CalcoloCalorieButton.Click += new System.EventHandler(this.CalcoloCalorieButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(106, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 45);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "FORMAZIONE DIETA";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -226,6 +236,7 @@
             this.BackgroundImage = global::PROGETTO_PERSONALE_4_.Properties.Resources._75204555_selezione_di_spezie_erbe_e_verdi_ingredienti_per_la_cottura_sfondo_alimentare_sul_tavolo_nero;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1164, 602);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.UscitaDalProgramma);
             this.Controls.Add(this.CalcoloCarboidratibutton);
             this.Controls.Add(this.label6);
@@ -271,6 +282,7 @@
         private System.Windows.Forms.Button CalcoloCarboidratibutton;
         private System.Windows.Forms.Button UscitaDalProgramma;
         private System.Windows.Forms.Button CalcoloCalorieButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

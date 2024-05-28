@@ -26,17 +26,19 @@ namespace PROGETTO_PERSONALE_4_
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CaricaSchedeDaJson();
+            // Ensure ListView is cleared when the form loads
+            listView1.Items.Clear();
         }
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // Save the data before clearing the list
+            SalvaSchedeInJson();
             listView1.Items.Clear();
             schede.Clear();
-            SalvaSchedeInJson();
         }
 
-
-        //CALCOLO FABBISOGNO CALORICO GIORNALIERO - BOTTONE
+        // CALCOLO FABBISOGNO CALORICO GIORNALIERO - BOTTONE
         private void CalcoloCalorieButton_Click(object sender, EventArgs e)
         {
             string sesso = SessoComboBox.Text;
@@ -57,9 +59,7 @@ namespace PROGETTO_PERSONALE_4_
             SalvaSchedeInJson();
         }
 
-
-
-        //CALCOLO GRASSI - BOTTONE
+        // CALCOLO GRASSI - BOTTONE
         private void CalcoloGrassibutton_Click(object sender, EventArgs e)
         {
             double peso = double.Parse(PesoTextBox.Text);
@@ -76,9 +76,7 @@ namespace PROGETTO_PERSONALE_4_
             SalvaSchedeInJson();
         }
 
-
-
-        //CALCOLO PROTEINE - BOTTONE
+        // CALCOLO PROTEINE - BOTTONE
         private void CalcoloProteinebutton_Click(object sender, EventArgs e)
         {
             double peso = double.Parse(PesoTextBox.Text);
@@ -93,11 +91,9 @@ namespace PROGETTO_PERSONALE_4_
 
             schede.Add(risultato);
             SalvaSchedeInJson();
-
         }
 
-
-        //CALCOLO CARBOIDRATI - BOTTONE
+        // CALCOLO CARBOIDRATI - BOTTONE
         private void CalcoloCarboidratibutton_Click(object sender, EventArgs e)
         {
             double peso = double.Parse(PesoTextBox.Text);
@@ -114,14 +110,14 @@ namespace PROGETTO_PERSONALE_4_
             SalvaSchedeInJson();
         }
 
-        //SERIALIZZAZIONE
+        // SERIALIZZAZIONE
         private void SalvaSchedeInJson()
         {
             string json = JsonConvert.SerializeObject(schede, Formatting.Indented);
             File.WriteAllText("scheda.json", json);
         }
 
-        //DESERIALIZZAZIONE
+        // DESERIALIZZAZIONE
         private void CaricaSchedeDaJson()
         {
             if (File.Exists("scheda.json"))
@@ -136,7 +132,7 @@ namespace PROGETTO_PERSONALE_4_
             }
         }
 
-        //BOTTONE USCITA DAL PROGRAMMA
+        // BOTTONE USCITA DAL PROGRAMMA
         private void UscitaDalProgramma_Click(object sender, EventArgs e)
         {
             Application.Exit();
