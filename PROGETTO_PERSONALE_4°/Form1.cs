@@ -137,5 +137,12 @@ namespace PROGETTO_PERSONALE_4_
         {
             Application.Exit();
         }
+
+
+        //BOTTONE PULISCI LISTA
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+        }
     }
 }
