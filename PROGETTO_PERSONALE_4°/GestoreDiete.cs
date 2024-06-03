@@ -11,7 +11,7 @@ namespace PROGETTO_PERSONALE_4_
     {
         private List<Dieta> diete;
 
-        // Costruttore per inizializzare le diete
+        // Costruttore per inizializzare le dietee
         public GestoreDiete()
         {
             diete = InizializzaDiete();
