@@ -177,6 +177,7 @@ namespace PROGETTO_PERSONALE_4_
             diete.Add(dieta2000_2500);
             diete.Add(dieta2500_3000);
 
+            //Restituzione della lista di diete inizializzat
             return diete;
         }
 

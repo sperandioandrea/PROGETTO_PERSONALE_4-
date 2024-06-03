@@ -8,22 +8,24 @@ namespace PROGETTO_PERSONALE_4_
 {
     public class Dieta
     {
-        public string Nome { get; set; }
-        public List<string> Colazione { get; set; }
-        public List<string> Snack { get; set; }
-        public List<string> Pranzo { get; set; }
-        public List<string> Merenda { get; set; }
-        public List<string> Cena { get; set; }
+        // Dichiarazione delle proprietà della classe Dieta
+        public string Nome { get; set; }          //Nome della dieta
+        public List<string> Colazione { get; set; }   //opzioni per la colazione
+        public List<string> Snack { get; set; }       //Opzioni per lo spuntino
+        public List<string> Pranzo { get; set; }      //Opzioni per il pranzo
+        public List<string> Merenda { get; set; }     //Opzioni per la merenda
+        public List<string> Cena { get; set; }        //Opzioni per la cena
 
         // Costruttore per inizializzare una Dieta
         public Dieta(string nome, List<string> colazione, List<string> snack, List<string> pranzo, List<string> merenda, List<string> cena)
         {
-            Nome = nome;
-            Colazione = colazione;
-            Snack = snack;
-            Pranzo = pranzo;
-            Merenda = merenda;
-            Cena = cena;
+            //Inizializzazione delle proprietà della dieta con i valori forniti come parametri
+            Nome = nome;                    //Inizializzazione del nome
+            Colazione = colazione;          //Inizializzazione delle opzioni per la colazione
+            Snack = snack;                  //Inizializzazione delle opzioni per lo spuntino
+            Pranzo = pranzo;                //Inizializzazione delle opzioni per il pranzo
+            Merenda = merenda;              //Inizializzazione delle opzioni per la merenda
+            Cena = cena;                    //Inizializzazione delle opzioni per la cena
         }
     }
 }

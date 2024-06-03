@@ -328,12 +328,13 @@
             // 
             // FormazioneDieta
             // 
-            this.FormazioneDieta.Location = new System.Drawing.Point(163, 518);
+            this.FormazioneDieta.BackColor = System.Drawing.Color.LawnGreen;
+            this.FormazioneDieta.Location = new System.Drawing.Point(34, 456);
             this.FormazioneDieta.Name = "FormazioneDieta";
-            this.FormazioneDieta.Size = new System.Drawing.Size(160, 51);
+            this.FormazioneDieta.Size = new System.Drawing.Size(368, 134);
             this.FormazioneDieta.TabIndex = 30;
-            this.FormazioneDieta.Text = "button1";
-            this.FormazioneDieta.UseVisualStyleBackColor = true;
+            this.FormazioneDieta.Text = "FORMAZIONE/STAMPA DIETA";
+            this.FormazioneDieta.UseVisualStyleBackColor = false;
             this.FormazioneDieta.Click += new System.EventHandler(this.FormazioneDieta_Click);
             // 
             // Form1

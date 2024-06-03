@@ -15,30 +15,39 @@ namespace PROGETTO_PERSONALE_4_
 {
     public partial class Form1 : Form
     {
+        //Dichiarazione del campo privato gestoreDiete di tipo GestoreDiete
         private GestoreDiete gestoreDiete;
 
         public Form1()
         {
+            //Inizializzazione del form
             InitializeComponent();
+            //Creazione di un'istanza di GestoreDiete
             gestoreDiete = new GestoreDiete();
         }
 
+        //Dichiarazione di una lista di stringhe chiamata schede
         private List<string> schede = new List<string>();
 
+       
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Pulisce la listView1
             listView1.Items.Clear();
+            //Carica le schede da un file JSON
             CaricaSchedeDaJson();
         }
 
+       
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             SalvaSchedeInJson();
         }
 
-        // CALCOLO FABBISOGNO CALORICO GIORNALIERO - BOTTONE
+        // CALCOLO FABBISOGNO CALORICO GIORNALIERO - BOTTONE (Metodo chiamato quando si clicca sul bottone per il calcolo del fabbisogno calorico giornaliero)
         private void CalcoloCalorieButton_Click(object sender, EventArgs e)
         {
+
             string sesso = SessoComboBox.Text;
             double peso = double.Parse(PesoTextBox.Text);
             double altezza = double.Parse(AltezzaTextBox.Text);
@@ -56,6 +65,7 @@ namespace PROGETTO_PERSONALE_4_
             Calorie.Text = fabbisognoCalorico.ToString();
 
             schede.Add(risultato);
+            //Metodo per salvare le schede in un file JSON
             SalvaSchedeInJson();
         }
 
@@ -116,28 +126,37 @@ namespace PROGETTO_PERSONALE_4_
             SalvaSchedeInJson();
         }
 
-        // SERIALIZZAZIONE
+        // Metodo per la serializzazione della lista di schede in JSON e salvataggio su file
         private void SalvaSchedeInJson()
         {
+            // Serializza la lista di schede in formato JSON con formattazione indentata
             string json = JsonConvert.SerializeObject(schede, Formatting.Indented);
+
+            // Scrive il JSON nel file "scheda.json"
             File.WriteAllText("scheda.json", json);
         }
 
-        // DESERIALIZZAZIONE
+        // Metodo per la deserializzazione delle schede da un file JSON e caricamento nella lista schede
         private void CaricaSchedeDaJson()
         {
+            // Verifica se il file "scheda.json" esiste
             if (File.Exists("scheda.json"))
             {
+                // Legge il contenuto del file "scheda.json"
                 string json = File.ReadAllText("scheda.json");
+
+                // Deserializza il JSON in una lista di schede
+                // Se il file è vuoto o non può essere deserializzato, crea una nuova lista vuota
                 schede = JsonConvert.DeserializeObject<List<string>>(json) ?? new List<string>();
 
+                // Aggiunge ogni scheda alla listView1
                 foreach (string scheda in schede)
                 {
                     listView1.Items.Add(new ListViewItem(scheda));
                 }
             }
         }
-        
+
         //BOTTONE PULISCI LISTA
         private void PulisciLista_Click(object sender, EventArgs e)
         {
@@ -150,7 +169,7 @@ namespace PROGETTO_PERSONALE_4_
             this.Close();
         }
 
-        //BOTTONE FORMAZIONE DIETA
+        //BOTTONE FORMAZIONE DIETA (Metodo chiamato quando si clicca sul bottone per la formazione della dieta)
         private void FormazioneDieta_Click(object sender, EventArgs e)
         {
             // Recupera il valore delle calorie dalla TextBox
@@ -195,23 +214,33 @@ namespace PROGETTO_PERSONALE_4_
         // Metodo per aggiungere un elemento alla listView1
         private void AggiungiElementoListView(string titolo, List<string> elementi)
         {
+            // Aggiunge un nuovo elemento alla ListView con il titolo fornito
             listView1.Items.Add(new ListViewItem(titolo));
+
+            // Itera attraverso ciascun elemento nella lista elementi
             foreach (var elemento in elementi)
             {
+                // Aggiunge un nuovo elemento alla ListView con il testo dell'elemento corrente della lista
                 listView1.Items.Add(new ListViewItem(elemento));
             }
         }
 
         private void SalvaDietaVisualizzataInJson()
         {
+            // Creazione di una lista di stringhe per memorizzare le informazioni della dieta visualizzata
             List<string> dietaVisualizzata = new List<string>();
 
+            // Iterazione attraverso gli elementi della listView1
             foreach (ListViewItem item in listView1.Items)
             {
+                // Aggiunge il testo di ogni elemento della ListView alla lista dietaVisualizzata
                 dietaVisualizzata.Add(item.Text);
             }
 
+            // Serializza la lista dietaVisualizzata in formato JSON con formattazione indentata
             string json = JsonConvert.SerializeObject(dietaVisualizzata, Formatting.Indented);
+
+            // Scrive il JSON nel file "dieta_visualizzata.json"
             File.WriteAllText("dieta_visualizzata.json", json);
         }
     }

@@ -8,59 +8,54 @@ namespace PROGETTO_PERSONALE_4_
 {
     public class CalcoloProteine
     {
-        //ATTRIBUTI
+        // Attributo pubblico per il peso
         public double Peso { get; set; }
 
-
-
-
-        //COSTRUTTORE SENZA PARAMETRI
+        // Costruttore senza parametri che imposta il peso a 0
         public CalcoloProteine()
         {
             Peso = 0;
         }
 
-        //COSTRUTTORE CON PARAMETRI
+        // Costruttore con parametri che imposta il peso con il valore fornito
         public CalcoloProteine(double peso)
         {
             Peso = peso;
         }
 
-        //COSTRUTTORE DI COPIA
+        // Costruttore di copia che copia il peso da un'altra istanza di CalcoloProteine
         public CalcoloProteine(CalcoloProteine p)
         {
             Peso = p.Peso;
         }
 
-
-
-
-        //FUNZIONE CALCOLO PROTEINE GIORNALIERE
+        // Funzione per calcolare le proteine giornaliere basate sul peso
         public double CalcolaProteine()
         {
             return Peso * 2;
         }
 
-
-
-
-        //METODO ToString
+        // Metodo ToString che restituisce una rappresentazione testuale dell'oggetto
         public override string ToString()
         {
             return $"Peso: {Peso}";
         }
 
-        //METODO Equals
+        // Metodo Equals per confrontare due istanze di CalcoloProteine
         public override bool Equals(object obj)
         {
+            // Verifica se l'oggetto è nullo o non è dello stesso tipo di CalcoloProteine
             if (obj == null || GetType() != obj.GetType())
                 return false;
 
+            // Converte l'oggetto in CalcoloProteine
             CalcoloProteine altro = (CalcoloProteine)obj;
+
+            // Confronta i pesi delle due istanze
             return Peso == altro.Peso;
         }
 
-        //METODO GetHashCode
+        // Metodo GetHashCode per ottenere il codice hash dell'oggetto
         public override int GetHashCode()
         {
             return Peso.GetHashCode();

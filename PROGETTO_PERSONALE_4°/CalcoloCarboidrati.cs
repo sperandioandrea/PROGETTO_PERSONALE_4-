@@ -8,48 +8,40 @@ namespace PROGETTO_PERSONALE_4_
 {
     public class CalcoloCarboidrati
     {
-        //ATTRIBUTI
+        // Attributo pubblico per il peso
         public double Peso { get; set; }
 
-
-
-        //COSTRUTTURE SENZA PARAMETRI
-        public CalcoloCarboidrati() 
+        // Costruttore senza parametri che inizializza il peso a 0
+        public CalcoloCarboidrati()
         {
             Peso = 0;
         }
 
-        //COSTRUTTORE CON PARAMETRI
+        // Costruttore con parametri che imposta il peso con il valore fornito
         public CalcoloCarboidrati(double peso)
         {
-            Peso = peso;    
+            Peso = peso;
         }
 
-        //COSTRUTTORE DI COPIA
+        // Costruttore di copia che copia il peso da un'altra istanza di CalcoloCarboidrati
         public CalcoloCarboidrati(CalcoloCarboidrati cr)
         {
             Peso = cr.Peso;
         }
 
-
-
-
-        //FUNZIONE CALCOLO CARBOIDRATI GIORNALIERI
+        // Funzione per calcolare i carboidrati giornalieri basati sul peso
         public double CalcolaCarboidrati()
         {
             return Peso * 5;
         }
 
-
-
-
-        //METODO ToString
+        // Metodo ToString che restituisce una rappresentazione testuale dell'oggetto
         public override string ToString()
         {
             return $"Peso: {Peso}";
         }
 
-        //METODO Equals
+        // Metodo Equals per confrontare due istanze di CalcoloCarboidrati
         public override bool Equals(object obj)
         {
             if (obj == null || GetType() != obj.GetType())
@@ -59,11 +51,10 @@ namespace PROGETTO_PERSONALE_4_
             return Peso == altro.Peso;
         }
 
-        //METODO GetHashCode
+        // Metodo GetHashCode per ottenere il codice hash dell'oggetto
         public override int GetHashCode()
         {
             return Peso.GetHashCode();
         }
-
     }
 }
