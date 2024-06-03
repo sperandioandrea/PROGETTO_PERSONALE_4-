@@ -15,9 +15,12 @@ namespace PROGETTO_PERSONALE_4_
 {
     public partial class Form1 : Form
     {
+        private GestoreDiete gestoreDiete;
+
         public Form1()
         {
             InitializeComponent();
+            gestoreDiete = new GestoreDiete();
         }
 
         private List<string> schede = new List<string>();
@@ -145,6 +148,71 @@ namespace PROGETTO_PERSONALE_4_
         private void UscitaProgramma_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        //BOTTONE FORMAZIONE DIETA
+        private void FormazioneDieta_Click(object sender, EventArgs e)
+        {
+            // Recupera il valore delle calorie dalla TextBox
+            if (double.TryParse(Calorie.Text, out double fabbisognoCalorico))
+            {
+                // Seleziona la dieta in base al fabbisogno calorico
+                Dieta dietaSelezionata = gestoreDiete.SelezionaDieta((int)fabbisognoCalorico);
+
+                // Aggiungi la dieta selezionata alla listView1
+                AggiungiDietaToListView(dietaSelezionata);
+
+                // Salva la dieta visualizzata nel file JSON
+                SalvaDietaVisualizzataInJson();
+            }
+            else
+            {
+                MessageBox.Show("Inserisci un valore numerico valido per le calorie.");
+            }
+        }
+
+        // Metodo per aggiungere la dieta alla listView1
+        private void AggiungiDietaToListView(Dieta dieta)
+        {
+            // Se la dieta è nulla, esci dalla funzione
+            if (dieta == null)
+            {
+                MessageBox.Show("Non è stata trovata una dieta adatta al tuo fabbisogno calorico.");
+                return;
+            }
+
+            // Cancella gli elementi presenti nella listView1
+            listView1.Items.Clear();
+
+            // Aggiungi le informazioni della dieta alla listView1
+            AggiungiElementoListView("Colazione", dieta.Colazione);
+            AggiungiElementoListView("Snack", dieta.Snack);
+            AggiungiElementoListView("Pranzo", dieta.Pranzo);
+            AggiungiElementoListView("Merenda", dieta.Merenda);
+            AggiungiElementoListView("Cena", dieta.Cena);
+        }
+
+        // Metodo per aggiungere un elemento alla listView1
+        private void AggiungiElementoListView(string titolo, List<string> elementi)
+        {
+            listView1.Items.Add(new ListViewItem(titolo));
+            foreach (var elemento in elementi)
+            {
+                listView1.Items.Add(new ListViewItem(elemento));
+            }
+        }
+
+        private void SalvaDietaVisualizzataInJson()
+        {
+            List<string> dietaVisualizzata = new List<string>();
+
+            foreach (ListViewItem item in listView1.Items)
+            {
+                dietaVisualizzata.Add(item.Text);
+            }
+
+            string json = JsonConvert.SerializeObject(dietaVisualizzata, Formatting.Indented);
+            File.WriteAllText("dieta_visualizzata.json", json);
         }
     }
 }
