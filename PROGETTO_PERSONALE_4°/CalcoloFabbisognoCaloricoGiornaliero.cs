@@ -42,7 +42,7 @@ namespace PROGETTO_PERSONALE_4_
             LivelloAttivita = livelloAttivita;
         }
 
-        //COSTRUTTORE DI COPIA.
+        //COSTRUTTORE DI COPIA
         public CalcoloFabbisognoCaloricoGiornaliero(CalcoloFabbisognoCaloricoGiornaliero c)
         {
             Sesso = c.Sesso;
