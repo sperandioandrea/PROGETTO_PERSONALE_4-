@@ -43,34 +43,42 @@
             this.CalcoloProteinebutton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.CalcoloCarboidratibutton = new System.Windows.Forms.Button();
-            this.UscitaDalProgramma = new System.Windows.Forms.Button();
             this.CalcoloCalorieButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.PulisciLista = new System.Windows.Forms.Button();
+            this.UscitaProgramma = new System.Windows.Forms.Button();
+            this.Calorie = new System.Windows.Forms.TextBox();
+            this.Grassi = new System.Windows.Forms.TextBox();
+            this.Proteine = new System.Windows.Forms.TextBox();
+            this.Carboidrati = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PesoTextBox
             // 
-            this.PesoTextBox.Location = new System.Drawing.Point(233, 122);
+            this.PesoTextBox.Location = new System.Drawing.Point(179, 296);
             this.PesoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.PesoTextBox.Name = "PesoTextBox";
-            this.PesoTextBox.Size = new System.Drawing.Size(132, 25);
+            this.PesoTextBox.Size = new System.Drawing.Size(132, 29);
             this.PesoTextBox.TabIndex = 2;
             // 
             // AltezzaTextBox
             // 
-            this.AltezzaTextBox.Location = new System.Drawing.Point(233, 158);
+            this.AltezzaTextBox.Location = new System.Drawing.Point(179, 332);
             this.AltezzaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.AltezzaTextBox.Name = "AltezzaTextBox";
-            this.AltezzaTextBox.Size = new System.Drawing.Size(132, 25);
+            this.AltezzaTextBox.Size = new System.Drawing.Size(132, 29);
             this.AltezzaTextBox.TabIndex = 3;
             // 
             // EtaTextBox
             // 
-            this.EtaTextBox.Location = new System.Drawing.Point(233, 194);
+            this.EtaTextBox.Location = new System.Drawing.Point(179, 368);
             this.EtaTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.EtaTextBox.Name = "EtaTextBox";
-            this.EtaTextBox.Size = new System.Drawing.Size(132, 25);
+            this.EtaTextBox.Size = new System.Drawing.Size(132, 29);
             this.EtaTextBox.TabIndex = 4;
             // 
             // LivelloAttivitaComboBox
@@ -80,10 +88,10 @@
             "sedentario",
             "moderamente attivo",
             "attivo"});
-            this.LivelloAttivitaComboBox.Location = new System.Drawing.Point(217, 230);
+            this.LivelloAttivitaComboBox.Location = new System.Drawing.Point(163, 404);
             this.LivelloAttivitaComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.LivelloAttivitaComboBox.Name = "LivelloAttivitaComboBox";
-            this.LivelloAttivitaComboBox.Size = new System.Drawing.Size(160, 26);
+            this.LivelloAttivitaComboBox.Size = new System.Drawing.Size(160, 30);
             this.LivelloAttivitaComboBox.TabIndex = 5;
             // 
             // SessoComboBox
@@ -92,9 +100,9 @@
             this.SessoComboBox.Items.AddRange(new object[] {
             "uomo",
             "donna"});
-            this.SessoComboBox.Location = new System.Drawing.Point(233, 87);
+            this.SessoComboBox.Location = new System.Drawing.Point(179, 261);
             this.SessoComboBox.Name = "SessoComboBox";
-            this.SessoComboBox.Size = new System.Drawing.Size(132, 26);
+            this.SessoComboBox.Size = new System.Drawing.Size(132, 30);
             this.SessoComboBox.TabIndex = 6;
             // 
             // listView1
@@ -102,9 +110,9 @@
             this.listView1.BackColor = System.Drawing.Color.White;
             this.listView1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(743, 39);
+            this.listView1.Location = new System.Drawing.Point(592, 39);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(397, 510);
+            this.listView1.Size = new System.Drawing.Size(824, 551);
             this.listView1.TabIndex = 7;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
@@ -112,52 +120,67 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(123, 126);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(50, 300);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 18);
+            this.label2.Size = new System.Drawing.Size(92, 27);
             this.label2.TabIndex = 9;
             this.label2.Text = "peso - kg";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 92);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(50, 266);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 18);
+            this.label1.Size = new System.Drawing.Size(60, 27);
             this.label1.TabIndex = 10;
             this.label1.Text = "sesso";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(123, 162);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(50, 336);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 18);
+            this.label3.Size = new System.Drawing.Size(118, 27);
             this.label3.TabIndex = 11;
             this.label3.Text = "altezza - cm";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(123, 194);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(50, 368);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 18);
+            this.label4.Size = new System.Drawing.Size(39, 27);
             this.label4.TabIndex = 12;
             this.label4.Text = "età";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(123, 230);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(50, 404);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 18);
+            this.label5.Size = new System.Drawing.Size(108, 27);
             this.label5.TabIndex = 13;
-            this.label5.Text = "stato";
+            this.label5.Text = "stato fisico";
             // 
             // CalcoloGrassibutton
             // 
             this.CalcoloGrassibutton.BackColor = System.Drawing.Color.Yellow;
-            this.CalcoloGrassibutton.Location = new System.Drawing.Point(512, 54);
+            this.CalcoloGrassibutton.Location = new System.Drawing.Point(414, 236);
             this.CalcoloGrassibutton.Name = "CalcoloGrassibutton";
             this.CalcoloGrassibutton.Size = new System.Drawing.Size(142, 63);
             this.CalcoloGrassibutton.TabIndex = 14;
@@ -168,7 +191,7 @@
             // CalcoloProteinebutton
             // 
             this.CalcoloProteinebutton.BackColor = System.Drawing.Color.Yellow;
-            this.CalcoloProteinebutton.Location = new System.Drawing.Point(512, 123);
+            this.CalcoloProteinebutton.Location = new System.Drawing.Point(414, 305);
             this.CalcoloProteinebutton.Name = "CalcoloProteinebutton";
             this.CalcoloProteinebutton.Size = new System.Drawing.Size(142, 60);
             this.CalcoloProteinebutton.TabIndex = 15;
@@ -180,16 +203,16 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(833, 13);
+            this.label6.Location = new System.Drawing.Point(911, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(203, 18);
+            this.label6.Size = new System.Drawing.Size(272, 23);
             this.label6.TabIndex = 16;
             this.label6.Text = "SCHEDA  PERSONALE   UTENTE";
             // 
             // CalcoloCarboidratibutton
             // 
             this.CalcoloCarboidratibutton.BackColor = System.Drawing.Color.Yellow;
-            this.CalcoloCarboidratibutton.Location = new System.Drawing.Point(512, 189);
+            this.CalcoloCarboidratibutton.Location = new System.Drawing.Point(414, 371);
             this.CalcoloCarboidratibutton.Name = "CalcoloCarboidratibutton";
             this.CalcoloCarboidratibutton.Size = new System.Drawing.Size(142, 63);
             this.CalcoloCarboidratibutton.TabIndex = 17;
@@ -197,25 +220,13 @@
             this.CalcoloCarboidratibutton.UseVisualStyleBackColor = false;
             this.CalcoloCarboidratibutton.Click += new System.EventHandler(this.CalcoloCarboidratibutton_Click);
             // 
-            // UscitaDalProgramma
-            // 
-            this.UscitaDalProgramma.BackColor = System.Drawing.Color.Red;
-            this.UscitaDalProgramma.ForeColor = System.Drawing.Color.Black;
-            this.UscitaDalProgramma.Location = new System.Drawing.Point(983, 555);
-            this.UscitaDalProgramma.Name = "UscitaDalProgramma";
-            this.UscitaDalProgramma.Size = new System.Drawing.Size(114, 44);
-            this.UscitaDalProgramma.TabIndex = 18;
-            this.UscitaDalProgramma.Text = "USCITA DAL PROGRAMMA ";
-            this.UscitaDalProgramma.UseVisualStyleBackColor = false;
-            this.UscitaDalProgramma.Click += new System.EventHandler(this.UscitaDalProgramma_Click);
-            // 
             // CalcoloCalorieButton
             // 
             this.CalcoloCalorieButton.BackColor = System.Drawing.Color.Yellow;
-            this.CalcoloCalorieButton.Location = new System.Drawing.Point(106, 13);
+            this.CalcoloCalorieButton.Location = new System.Drawing.Point(52, 175);
             this.CalcoloCalorieButton.Margin = new System.Windows.Forms.Padding(4);
             this.CalcoloCalorieButton.Name = "CalcoloCalorieButton";
-            this.CalcoloCalorieButton.Size = new System.Drawing.Size(309, 67);
+            this.CalcoloCalorieButton.Size = new System.Drawing.Size(331, 79);
             this.CalcoloCalorieButton.TabIndex = 0;
             this.CalcoloCalorieButton.Text = "CALCOLO FABBISOGNO CALORICO GIORNALIERO CALORIE";
             this.CalcoloCalorieButton.UseVisualStyleBackColor = false;
@@ -223,34 +234,126 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(298, 321);
+            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.Location = new System.Drawing.Point(52, 466);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 45);
+            this.button1.Size = new System.Drawing.Size(331, 124);
             this.button1.TabIndex = 19;
             this.button1.Text = "FORMAZIONE DIETA";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // PulisciLista
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(819, 555);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 35);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "PULISCI LISTA";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.PulisciLista.BackColor = System.Drawing.Color.Red;
+            this.PulisciLista.Location = new System.Drawing.Point(431, 476);
+            this.PulisciLista.Name = "PulisciLista";
+            this.PulisciLista.Size = new System.Drawing.Size(142, 45);
+            this.PulisciLista.TabIndex = 20;
+            this.PulisciLista.Text = "PULISCI LISTA";
+            this.PulisciLista.UseVisualStyleBackColor = false;
+            this.PulisciLista.Click += new System.EventHandler(this.PulisciLista_Click);
+            // 
+            // UscitaProgramma
+            // 
+            this.UscitaProgramma.BackColor = System.Drawing.Color.Red;
+            this.UscitaProgramma.Location = new System.Drawing.Point(431, 527);
+            this.UscitaProgramma.Name = "UscitaProgramma";
+            this.UscitaProgramma.Size = new System.Drawing.Size(142, 63);
+            this.UscitaProgramma.TabIndex = 21;
+            this.UscitaProgramma.Text = "USCITA DAL PROGRAMMA";
+            this.UscitaProgramma.UseVisualStyleBackColor = false;
+            this.UscitaProgramma.Click += new System.EventHandler(this.UscitaProgramma_Click);
+            // 
+            // Calorie
+            // 
+            this.Calorie.Location = new System.Drawing.Point(45, 86);
+            this.Calorie.Name = "Calorie";
+            this.Calorie.Size = new System.Drawing.Size(100, 29);
+            this.Calorie.TabIndex = 22;
+            // 
+            // Grassi
+            // 
+            this.Grassi.Location = new System.Drawing.Point(179, 86);
+            this.Grassi.Name = "Grassi";
+            this.Grassi.Size = new System.Drawing.Size(100, 29);
+            this.Grassi.TabIndex = 23;
+            // 
+            // Proteine
+            // 
+            this.Proteine.Location = new System.Drawing.Point(316, 86);
+            this.Proteine.Name = "Proteine";
+            this.Proteine.Size = new System.Drawing.Size(100, 29);
+            this.Proteine.TabIndex = 24;
+            // 
+            // Carboidrati
+            // 
+            this.Carboidrati.Location = new System.Drawing.Point(456, 86);
+            this.Carboidrati.Name = "Carboidrati";
+            this.Carboidrati.Size = new System.Drawing.Size(100, 29);
+            this.Carboidrati.TabIndex = 25;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(41, 60);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 23);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Calorie";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(175, 60);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 23);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Grassi";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(312, 60);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 23);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Proteine";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(452, 60);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(99, 23);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Carboidrati";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PROGETTO_PERSONALE_4_.Properties.Resources._75204555_selezione_di_spezie_erbe_e_verdi_ingredienti_per_la_cottura_sfondo_alimentare_sul_tavolo_nero;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1164, 602);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1428, 602);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Carboidrati);
+            this.Controls.Add(this.Proteine);
+            this.Controls.Add(this.Grassi);
+            this.Controls.Add(this.Calorie);
+            this.Controls.Add(this.UscitaProgramma);
+            this.Controls.Add(this.PulisciLista);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.UscitaDalProgramma);
             this.Controls.Add(this.CalcoloCarboidratibutton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.CalcoloProteinebutton);
@@ -293,10 +396,18 @@
         private System.Windows.Forms.Button CalcoloProteinebutton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button CalcoloCarboidratibutton;
-        private System.Windows.Forms.Button UscitaDalProgramma;
         private System.Windows.Forms.Button CalcoloCalorieButton;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button PulisciLista;
+        private System.Windows.Forms.Button UscitaProgramma;
+        private System.Windows.Forms.TextBox Calorie;
+        private System.Windows.Forms.TextBox Grassi;
+        private System.Windows.Forms.TextBox Proteine;
+        private System.Windows.Forms.TextBox Carboidrati;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
 

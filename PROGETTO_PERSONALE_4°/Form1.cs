@@ -18,24 +18,19 @@ namespace PROGETTO_PERSONALE_4_
         public Form1()
         {
             InitializeComponent();
-            this.FormClosing += Form1_FormClosing;
-            UscitaDalProgramma.Click += UscitaDalProgramma_Click;
         }
 
         private List<string> schede = new List<string>();
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Ensure ListView is cleared when the form loads
             listView1.Items.Clear();
+            CaricaSchedeDaJson();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Save the data before clearing the list
             SalvaSchedeInJson();
-            listView1.Items.Clear();
-            schede.Clear();
         }
 
         // CALCOLO FABBISOGNO CALORICO GIORNALIERO - BOTTONE
@@ -55,6 +50,8 @@ namespace PROGETTO_PERSONALE_4_
             ListViewItem item = new ListViewItem(risultato);
             listView1.Items.Add(item);
 
+            Calorie.Text = fabbisognoCalorico.ToString();
+
             schede.Add(risultato);
             SalvaSchedeInJson();
         }
@@ -71,6 +68,8 @@ namespace PROGETTO_PERSONALE_4_
             string risultato = "Numero Grassi: " + grassi.ToString() + " g";
             ListViewItem item = new ListViewItem(risultato);
             listView1.Items.Add(item);
+
+            Grassi.Text = grassi.ToString();
 
             schede.Add(risultato);
             SalvaSchedeInJson();
@@ -89,6 +88,8 @@ namespace PROGETTO_PERSONALE_4_
             ListViewItem item = new ListViewItem(risultato);
             listView1.Items.Add(item);
 
+            Proteine.Text = proteine.ToString();
+
             schede.Add(risultato);
             SalvaSchedeInJson();
         }
@@ -105,6 +106,8 @@ namespace PROGETTO_PERSONALE_4_
             string risultato = "Numero Carboidrati: " + carboidrati.ToString() + " g";
             ListViewItem item = new ListViewItem(risultato);
             listView1.Items.Add(item);
+
+            Carboidrati.Text = carboidrati.ToString();
 
             schede.Add(risultato);
             SalvaSchedeInJson();
@@ -131,18 +134,17 @@ namespace PROGETTO_PERSONALE_4_
                 }
             }
         }
-
-        // BOTTONE USCITA DAL PROGRAMMA
-        private void UscitaDalProgramma_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-
+        
         //BOTTONE PULISCI LISTA
-        private void button2_Click(object sender, EventArgs e)
+        private void PulisciLista_Click(object sender, EventArgs e)
         {
             listView1.Items.Clear();
+        }
+
+        //BOTTONE USCITA DAL PROGRAMMA
+        private void UscitaProgramma_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
